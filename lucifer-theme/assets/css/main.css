@@ -1,0 +1,713 @@
+/* =====================================================
+   LUCIFER SEXSHOP
+   Diseño personalizado - 2026
+   Identidad: Sensual, elegante y atrevida
+===================================================== */
+
+/* 1. VARIABLES DE MARCA */
+
+:root {
+  --black: #110d12;
+  --black-soft: #1c151d;
+  --black-light: #29202b;
+
+  --red: #e51b3e;
+  --red-dark: #b80e30;
+
+  --purple: #b026ff;
+  --purple-dark: #7615b8;
+
+  --white: #ffffff;
+  --cream: #f5f2ef;
+  --malva: #e8dde7;
+  --gray: #a7a0aa;
+
+  --container: 1280px;
+  --radius: 8px;
+  --transition: 0.3s ease;
+
+  --red-glow: 0 0 20px rgba(229, 27, 62, 0.35);
+  --purple-glow: 0 0 20px rgba(176, 38, 255, 0.35);
+}
+
+/* 2. CONFIGURACIÓN GENERAL */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--black);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.container {
+  width: min(92%, var(--container));
+  margin-inline: auto;
+}
+
+/* 3. BARRA SUPERIOR */
+
+.announcement-bar {
+  background: var(--red);
+  color: var(--white);
+  text-align: center;
+  padding: 10px 15px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.announcement-bar p {
+  margin: 0;
+}
+
+/* 4. ENCABEZADO */
+
+.site-header {
+  background: var(--black);
+  color: var(--white);
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid rgba(176, 38, 255, 0.35);
+}
+
+.header-container {
+  min-height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* LOGO */
+
+.site-branding {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+}
+
+.lucifer-logo {
+  display: block;
+  width: 175px;
+  height: auto;
+  max-height: 75px;
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+.lucifer-logo:hover {
+  transform: scale(1.04);
+}
+
+/* MENÚ */
+
+.main-navigation .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  list-style: none;
+}
+
+.nav-menu a {
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+
+.nav-menu a:hover,
+.nav-menu .current-menu-item > a {
+  color: var(--red);
+}
+
+/* ICONOS */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header-icon {
+  position: relative;
+  color: var(--white);
+  font-size: 21px;
+  transition: var(--transition);
+}
+
+.header-icon:hover {
+  color: var(--purple);
+}
+
+.cart-count {
+  position: absolute;
+  top: -9px;
+  right: -10px;
+  min-width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  background: var(--red);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* BUSCADOR */
+
+.header-search .woocommerce-product-search {
+  display: flex;
+  align-items: center;
+}
+
+.header-search input[type="search"] {
+  width: 155px;
+  padding: 10px;
+  border: 1px solid #514253;
+  border-radius: 5px;
+  background: var(--black-soft);
+  color: var(--white);
+}
+
+.header-search input:focus {
+  outline: 1px solid var(--purple);
+}
+
+/* MENÚ MÓVIL */
+
+.mobile-menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin: 5px 0;
+  background: var(--red);
+}
+
+/* 5. BANNER PRINCIPAL */
+
+.hero-section {
+  min-height: 590px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 85% 50%,
+      rgba(176, 38, 255, 0.22),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 15% 85%,
+      rgba(229, 27, 62, 0.18),
+      transparent 45%
+    ),
+    linear-gradient(120deg, #110d12, #21121f 65%, #32102e);
+
+  color: var(--white);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 85px;
+  padding-bottom: 85px;
+}
+
+.hero-label {
+  color: var(--purple);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+
+.hero-content h1 {
+  max-width: 750px;
+  font-family: Georgia, serif;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 1;
+  font-weight: 700;
+  margin: 25px 0;
+  letter-spacing: -2px;
+}
+
+.hero-content h1 span {
+  display: block;
+  color: var(--red);
+  font-style: italic;
+  text-shadow: 0 0 25px rgba(229, 27, 62, 0.35);
+}
+
+.hero-content p {
+  max-width: 520px;
+  color: #e2d8e2;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 35px;
+}
+
+.hero-decoration {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  right: 9%;
+  top: 18%;
+  border: 1px solid rgba(176, 38, 255, 0.35);
+  border-radius: 50%;
+  box-shadow:
+    0 0 70px rgba(176, 38, 255, 0.15),
+    inset 0 0 50px rgba(229, 27, 62, 0.08);
+}
+
+/* 6. BOTONES */
+
+.btn-primary,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 32px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--red);
+  color: var(--white);
+  border: 1px solid var(--red);
+  box-shadow: var(--red-glow);
+}
+
+.btn-primary:hover {
+  background: var(--purple);
+  border-color: var(--purple);
+  color: var(--white);
+  box-shadow: var(--purple-glow);
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--purple);
+  color: var(--black);
+}
+
+.btn-outline:hover {
+  background: var(--purple);
+  color: var(--white);
+}
+
+/* 7. TÍTULOS DE SECCIÓN */
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading span {
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.section-heading h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(25px, 4vw, 38px);
+  color: var(--black);
+  margin: 14px 0;
+}
+
+.section-heading p {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+/* 8. CATEGORÍAS */
+
+.categories-section {
+  background: var(--cream);
+  padding: 90px 0;
+}
+
+.category-content ul.products {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.category-content ul.products li.product-category {
+  float: none !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 15px !important;
+  background: var(--white);
+  border-radius: var(--radius);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.category-content ul.products li.product-category:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--purple-glow);
+}
+
+.category-content ul.products li.product-category img {
+  border-radius: 6px;
+}
+
+/* 9. PRODUCTOS DESTACADOS */
+
+.featured-products {
+  background: var(--white);
+  padding: 90px 0;
+}
+
+.products-content ul.products {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.products-content ul.products li.product {
+  float: none !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 15px !important;
+  background: #faf8fa;
+  border: 1px solid #eee7ef;
+  border-radius: 9px;
+  transition: var(--transition);
+}
+
+.products-content ul.products li.product:hover {
+  transform: translateY(-6px);
+  border-color: var(--purple);
+  box-shadow: 0 10px 28px rgba(176, 38, 255, 0.13);
+}
+
+.products-content ul.products li.product img {
+  border-radius: 6px;
+}
+
+.products-content .woocommerce-loop-product__title {
+  color: var(--black);
+  font-size: 14px !important;
+}
+
+.products-content .price {
+  color: var(--red) !important;
+  font-weight: 800 !important;
+}
+
+.products-content .button {
+  background: var(--red) !important;
+  color: var(--white) !important;
+  border-radius: 5px !important;
+  transition: var(--transition);
+}
+
+.products-content .button:hover {
+  background: var(--purple) !important;
+}
+
+.products-action {
+  text-align: center;
+  margin-top: 45px;
+}
+
+/* 10. BANNER FINAL */
+
+.final-banner {
+  padding: 85px 20px;
+  text-align: center;
+  color: var(--white);
+
+  background:
+    radial-gradient(
+      circle at 85% 50%,
+      rgba(176, 38, 255, 0.25),
+      transparent 40%
+    ),
+    linear-gradient(120deg, var(--black), #281020);
+}
+
+.final-banner span {
+  color: var(--purple);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.final-banner h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 5vw, 50px);
+  margin: 20px 0;
+  color: var(--red);
+}
+
+.final-banner p {
+  color: var(--malva);
+}
+
+/* 11. PIE DE PÁGINA */
+
+.site-footer {
+  background: #09070a;
+  color: var(--white);
+  padding: 60px 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-brand h2 {
+  font-size: 26px;
+  margin: 0;
+  color: var(--white);
+}
+
+.footer-brand h2 span {
+  color: var(--red);
+}
+
+.footer-brand p {
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu a {
+  color: var(--malva);
+  font-size: 12px;
+}
+
+.footer-menu a:hover {
+  color: var(--purple);
+}
+
+.footer-bottom {
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #352738;
+  color: var(--gray);
+  font-size: 11px;
+}
+
+/* 12. RESPONSIVE - TABLETS */
+
+@media (max-width: 1000px) {
+  .header-container {
+    gap: 15px;
+  }
+
+  .main-navigation .nav-menu {
+    gap: 14px;
+  }
+
+  .header-search input[type="search"] {
+    width: 110px;
+  }
+}
+
+/* 13. RESPONSIVE - CELULARES */
+
+@media (max-width: 768px) {
+  .announcement-bar {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .header-container {
+    min-height: 76px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .lucifer-logo {
+    width: 125px;
+    max-height: 60px;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    order: 2;
+  }
+
+  .header-actions {
+    margin-left: auto;
+    gap: 13px;
+  }
+
+  .header-search {
+    display: none;
+  }
+
+  .main-navigation {
+    display: none;
+    order: 5;
+    width: 100%;
+  }
+
+  .main-navigation.is-open {
+    display: block;
+  }
+
+  .main-navigation .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 10px 0 20px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 12px 5px;
+    border-bottom: 1px solid #352738;
+  }
+
+  .hero-section {
+    min-height: 470px;
+  }
+
+  .hero-content {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .hero-decoration {
+    width: 190px;
+    height: 190px;
+    right: -80px;
+    opacity: 0.5;
+  }
+
+  .category-content ul.products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .products-content ul.products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .categories-section,
+  .featured-products {
+    padding: 60px 0;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+}
+
+/* 14. CELULARES PEQUEÑOS */
+
+@media (max-width: 420px) {
+  .brand-name {
+    font-size: 22px;
+  }
+
+  .lucifer-logo {
+    width: 112px;
+  }
+
+  .hero-content h1 {
+    font-size: 45px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .products-content ul.products li.product {
+    padding: 8px !important;
+  }
+
+  .section-heading h2 {
+    font-size: 25px;
+  }
+}
+
+/* 15. ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
