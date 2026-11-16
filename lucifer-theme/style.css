@@ -1,0 +1,77 @@
+/*
+Theme Name: Lucifer Sexshop
+Theme URI: https://lucifersexshop.com
+Author: Desarrollo personalizado
+Description: Tema personalizado para Lucifer Sexshop, integrado con WordPress y WooCommerce.
+Version: 1.0.0
+Requires at least: 6.5
+Requires PHP: 8.0
+Text Domain: lucifer-sexshop
+*/
+
+:root {
+  --lucifer-black: #111111;
+  --lucifer-red: #c51e35;
+  --lucifer-white: #ffffff;
+  --lucifer-cream: #f5f2ef;
+  --lucifer-gray: #777777;
+
+  --font-primary: Arial, sans-serif;
+
+  --container-width: 1280px;
+  --border-radius: 8px;
+  --transition: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  color: var(--lucifer-black);
+  background: var(--lucifer-white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: min(92%, var(--container-width));
+  margin-inline: auto;
+}
+
+.btn-primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 28px;
+  border: 0;
+  border-radius: var(--border-radius);
+  background: var(--lucifer-red);
+  color: var(--lucifer-white);
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--lucifer-black);
+}
