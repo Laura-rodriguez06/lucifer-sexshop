@@ -10,14 +10,21 @@ Text Domain: lucifer-sexshop
 */
 
 :root {
-  --lucifer-black: #111111;
-  --lucifer-red: #c51e35;
+  /* Identidad Lucifer */
+  --lucifer-black: #101014;
+  --lucifer-red: #e51b3e;
+  --lucifer-purple: #b026ff;
   --lucifer-white: #ffffff;
   --lucifer-cream: #f5f2ef;
   --lucifer-gray: #777777;
+  --lucifer-dark-gray: #25212b;
 
+  /* Efectos */
+  --purple-glow: 0 0 15px rgba(176, 38, 255, 0.45);
+  --red-glow: 0 0 15px rgba(229, 27, 62, 0.35);
+
+  /* Diseño */
   --font-primary: Arial, sans-serif;
-
   --container-width: 1280px;
   --border-radius: 8px;
   --transition: 0.3s ease;
